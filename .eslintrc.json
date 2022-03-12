@@ -33,7 +33,11 @@
     },
     {
       "files": ["*.ts"],
-      "extends": ["eslint:recommended","plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+      "extends": ["eslint:recommended","plugin:@typescript-eslint/recommended"]
+    },
+    {
+      "files": ["*.ts", "*.html", "*.scss"],
+      "extends": ["plugin:prettier/recommended"],
       "plugins": ["prettier"],
       "rules": {
         "prettier/prettier": ["error", {"singleQuote":  true, "endOfLine": "auto"}]
