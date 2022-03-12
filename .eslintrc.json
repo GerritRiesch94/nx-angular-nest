@@ -30,6 +30,14 @@
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nrwl/nx/javascript"],
       "rules": {}
+    },
+    {
+      "files": ["*.ts"],
+      "extends": ["eslint:recommended","plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+      "plugins": ["prettier"],
+      "rules": {
+        "prettier/prettier": ["error", {"singleQuote":  true, "endOfLine": "auto"}]
+      }
     }
   ]
 }
