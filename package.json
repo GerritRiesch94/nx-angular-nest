@@ -6,6 +6,8 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
+    "start:ui": "nx serve ui",
+    "start:api": "nx serve api",
     "build": "nx build",
     "test": "nx test"
   },
@@ -55,6 +57,7 @@
     "eslint": "~8.7.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-prettier": "^4.0.0",
     "jest": "27.2.3",
     "jest-preset-angular": "11.1.1",
     "prettier": "^2.5.1",
