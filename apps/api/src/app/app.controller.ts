@@ -1,4 +1,10 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, Res } from '@nestjs/common';
+import { Response } from 'express';
 
-@Controller()
-export class AppController {}
+@Controller('api')
+export class AppController {
+  @Get('health')
+  getHealth(@Res() response: Response): void {
+    response.status(200).send({ status: 'UP' });
+  }
+}
