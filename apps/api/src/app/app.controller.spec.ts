@@ -12,4 +12,8 @@ describe('AppController', () => {
       providers: [AppService],
     }).compile();
   });
+
+  it('should create app controller', () => {
+    expect(app).toBeTruthy();
+  });
 });
