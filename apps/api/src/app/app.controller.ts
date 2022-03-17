@@ -1,10 +1,10 @@
-import { Controller, Get, Res } from '@nestjs/common';
-import { Response } from 'express';
+import { Controller, Get, HttpCode } from '@nestjs/common';
 
 @Controller('api')
 export class AppController {
   @Get('health')
-  getHealth(@Res() response: Response): void {
-    response.status(200).send({ status: 'UP' });
+  @HttpCode(200)
+  getHealth(): { status: string } {
+    return { status: 'UP' };
   }
 }
