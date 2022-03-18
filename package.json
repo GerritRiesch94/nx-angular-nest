@@ -9,7 +9,9 @@
     "start:ui": "nx serve ui",
     "start:api": "nx serve api",
     "build": "nx build",
-    "test": "nx test ui && nx test api"
+    "test": "nx test ui && nx test api",
+    "lint:all": "nx lint ui && nx lint api",
+    "lint:all:fix": "nx lint ui --fix && nx lint api --fix"
   },
   "private": true,
   "dependencies": {
